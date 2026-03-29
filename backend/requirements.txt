@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+supabase
+python-dotenv
+sentry-sdk
+pytest
+httpx
