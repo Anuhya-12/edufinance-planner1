@@ -99,7 +99,7 @@ export default function FinancePage() {
 useEffect(() => {
   if (!profile?.family_income) return;
 
-  fetch(`http://localhost:8000/recommend-loans/${profile.family_income}`)
+  fetch(`${import.meta.env.VITE_BACKEND_URL}/recommend-loans/${profile.family_income}`)
     .then(res => res.json())
     .then((data) => {
       console.log("Filtered ML Loans:", data);
@@ -137,7 +137,7 @@ useEffect(() => {
 useEffect(() => {
   if (!profile?.family_income || !profile?.category) return;
 
-  fetch(`http://localhost:8000/recommend-scholarships/${profile.family_income}/${profile.category}`)
+  fetch(`${import.meta.env.VITE_BACKEND_URL}/recommend-scholarships/${profile.family_income}/${profile.category}`)
     .then(res => res.json())
     .then(data => {
       console.log("Scholarships:", data);

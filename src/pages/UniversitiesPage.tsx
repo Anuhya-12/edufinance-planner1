@@ -83,7 +83,7 @@ useEffect(() => {
   };
 }, []);
 const fetchRecommended = () => {
-  fetch(`http://localhost:8000/recommend-colleges/${Number(budget)}`)
+  fetch(`${import.meta.env.VITE_BACKEND_URL}/recommend-colleges/${Number(budget)}`)
     .then(res => res.json())
     .then(data => {
       console.log("Recommended Colleges:", data);
